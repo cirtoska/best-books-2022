@@ -1,13 +1,98 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: aliceblue;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+}
+
+header {
+  background-color: coral;
+}
+
+.lg-title {
+  font-family: 'Fugaz One', cursive;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+  padding: 1rem;
+}
+header > .lg-title > .border {
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  padding: 0 6rem;
+}
+h1, h3 {
+    padding: 0.5rem;
+}
+h1 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#bookList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.bookCard {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid black;
+  background-color: white;
+}
+
+footer {
+  background-color: coral;
+  margin: 2rem 0 0;
+  padding: 2rem;
+}
+
+footer > .copy {
+  color: white;
+  text-align: center;
+}
+footer > .copy > .signature {
+  font-style: italic;
+}
+ @media screen and (min-width:811px) and (max-width: 1170px) {
+  #bookList {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+ @media screen and (max-width: 900px) {
+  #bookList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  header>.lg-title>.border {
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 0;
+  }
+  .lg-title {
+    font-size: 3rem;
+  }
+}
+ @media screen and (max-width: 500px) {
+  #bookList {
+      grid-template-columns: 1fr;
+    }
+
+  .lg-title {
+    font-size: 2rem;
+  }
 }
